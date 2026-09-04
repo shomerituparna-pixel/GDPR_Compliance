@@ -21,7 +21,7 @@ with open(
 
 # Load FAISS index
 index = faiss.read_index(
-    "gdpr_index.faiss"
+    "data/gdpr_index.faiss"
 )
 
 

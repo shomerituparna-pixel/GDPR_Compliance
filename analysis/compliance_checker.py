@@ -17,7 +17,6 @@ if not HF_TOKEN:
 
 # Initialize Hugging Face client
 client = InferenceClient(
-    provider="hf-inference",
     api_key=HF_TOKEN,
 )
 
@@ -115,7 +114,7 @@ def analyze_document(document_text):
     )
 
     completion = client.chat.completions.create(
-        model="Qwen/Qwen3-8B-Instruct",
+        model="Qwen/Qwen3-8B",
         messages=[
             {
                 "role": "user",
